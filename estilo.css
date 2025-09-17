@@ -1,0 +1,161 @@
+/* Reset y configuración básica */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+/* Contenedor para el contenido principal (main) */
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Contenedor específico para el header */
+.header-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Encabezado */
+/* Encabezado Fijo (Sticky Header) */
+.site-header {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 1rem 0;
+  
+  /* --- ESTAS 3 LÍNEAS HACEN QUE QUEDE FIJO Y POR ENCIMA --- */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ESTA LÍNEA ES LA CLAVE PARA QUE SE PONGA ENCIMA */
+  /* --- Fin de las líneas clave --- */
+
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+nav ul { display: flex; list-style: none; }
+nav li { margin-left: 20px; }
+nav a { color: white; text-decoration: none; }
+
+/* Contenido principal */
+main { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin: 30px 0; }
+article { background: white; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.article-meta { color: #666; font-size: 0.9em; margin: 10px 0; }
+
+/* Imágenes de artículos */
+.post-img { width: 100%; height: 200px; object-fit: cover; }
+
+/* Contenido de artículos */
+.post-content { padding: 20px; }
+.tags { margin: 10px 0; }
+.tag { background: #007bff; color: white; padding: 3px 8px; margin: 2px; font-size: 0.8em; }
+
+/* Barra lateral */
+aside { background: #f8f9fa; padding: 20px; }
+.list { list-style: none; }
+
+/* Formularios */
+.search-form input,
+.search-form button,
+.newsletter input,
+.newsletter button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+/* Pie de página */
+footer { background:  #1E3A8A; color: white; text-align: center; padding: 20px 0; }
+
+/* Enlaces del footer */
+footer a {
+  color: #ffffff;       
+  text-decoration: none; /*  quita el subrayado */
+}
+
+footer a:hover {
+  color: #D1D5DB;  /* color cuando pasen el mouse */
+}
+
+
+h2 a {
+    color: #ffffff;   
+    text-decoration: none; /* quita el subrayado */
+}
+
+
+h2 a:hover {
+    color: #D1D5DB;     /*color al pasar el mouse */
+}
+
+.perfil {
+  width: 100px;         /* tamaño de la imagen */
+  height: 100px;
+  border-radius: 50%;   /* círculo */
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-right: 20px;   /* separa de las letras del menú */
+}
+
+img {
+  display: block;         /* evita espacios raros de inline */
+  margin: 20px auto;      /* agrega espacio arriba y abajo, y centra la imagen */
+  background-color: #fff; /* fondo blanco alrededor de la imagen */
+}
+
+
+img {
+  display: block;         /* evita espacios raros de inline */
+  margin: 20px auto;      /* agrega espacio arriba y abajo, y centra la imagen */
+  background-color: #fff; /* fondo blanco alrededor de la imagen */
+}
+
+
+
+img {
+
+  margin: 15px auto;      /* agrega espacio arriba y abajo, y centra la imagen */
+  background-color: #fff; /* fondo blanco alrededor de la imagen */
+}
+
+
+
+.article-meta {
+    color: #D1D5DB;   /* toda la línea en blanco */
+}
+
+.article-meta a {
+    color: #D1D5DB;   /* asegura que los enlaces también queden en blanco */
+    text-decoration: none; /*quita subrayado */
+}
+/* ===================================================
+   CORRECCIÓN PARA TÍTULOS DE ARTÍCULOS INVISIBLES
+   =================================================== */
+
+/* Le damos espaciado al contenedor del título */
+/* ===================================================
+   ESTILOS PARA EL ENCABEZADO DE CADA ARTÍCULO
+   (Fondo azul y texto blanco)
+   =================================================== */
+
+/* 1. Le ponemos el fondo azul y espaciado */
+article header {
+  background: #1E3A8A; /* Tu color azul original */
+  padding: 20px;
+}
+
+/* 2. Hacemos que el TÍTULO del artículo sea blanco para que se vea */
+article h2 a {
+  color: #FFFFFF; /* Texto en color blanco */
+  text-decoration: none;
+}
+
+article h2 a:hover {
+  text-decoration: underline; /* Opcional: subrayado al pasar el mouse */
+}
+
+/* 3. Hacemos que los METADATOS (autor, fecha) también sean blancos */
+article .article-meta,
+article .article-meta a {
+  color: #D1D5DB; /* Un blanco un poco más suave para diferenciar */
+  text-decoration: none;
+}
